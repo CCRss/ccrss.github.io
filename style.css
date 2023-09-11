@@ -1,35 +1,31 @@
 /* Общие стили для всей страницы */
 body {
-    font-family: Arial, sans-serif;  /* Шрифт для всей страницы */
+    font-family: Arial, sans-serif;
 }
 
 /* Стили для шапки */
 #header {
-    text-align: center;  /* Текст по центру */
-    background-color: #ffffff;  /* Фоновый цвет */
-    padding: 20px;  /* Отступы вокруг */
-}
-
-#content, #dynamic-content {
-    max-width: 800px;
-    margin: auto;
     text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
 }
 
+/* Стили для контейнера */
 #container {
-  display: flex;
+    display: flex;
+    justify-content: space-between;
 }
 
 #left-menu, #right-menu {
-  flex: 1;
-  background-color: #ccc;
-  padding: 15px;
+    flex: 1;
+    background-color: #ccc;
+    padding: 15px;
 }
 
-#center-content {
-  flex: 3;
-  background-color: #eee;
-  padding: 15px;
+#main-content {
+    flex: 3;
+    background-color: #eee;
+    padding: 15px;
 }
 
 
