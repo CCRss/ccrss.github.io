@@ -20,15 +20,18 @@ body {
   display: flex;
 }
 
-#left-menu {
+#left-menu, #right-menu {
   flex: 1;
   background-color: #ccc;
+  padding: 15px;
 }
 
 #main-content {
   flex: 3;
   background-color: #eee;
+  padding: 15px;
 }
+
 .close-button {
     cursor: pointer;
     float: right;
