@@ -16,6 +16,19 @@ body {
     text-align: center;
 }
 
+#container {
+  display: flex;
+}
+
+#left-menu {
+  flex: 1;
+  background-color: #ccc;
+}
+
+#main-content {
+  flex: 3;
+  background-color: #eee;
+}
 .close-button {
     cursor: pointer;
     float: right;
