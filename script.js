@@ -1,9 +1,27 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Load profile section
-    const profileSection = document.getElementById("profile-section");
-    profileSection.innerHTML = "<h2>Profile</h2><p>This is my GitHub profile.</p>";
+// Function to load project details
+function loadProjectDetails(projectId) {
+    const sourceElement = document.getElementById(`${projectId}-details`);
+    const dynamicContent = document.getElementById("dynamic-content");
 
-    // Load projects section
-    const projectsSection = document.getElementById("projects-section");
-    projectsSection.innerHTML = "<h2>Projects</h2><p>Project 1: Description</p><p>Project 2: Description</p>";
+    if (sourceElement) {
+        dynamicContent.innerHTML = sourceElement.innerHTML;
+    } else {
+        dynamicContent.innerHTML = 'Project details not found';
+    }
+}
+
+// On document load
+document.addEventListener("DOMContentLoaded", function() {
+    // Getting project elements
+    const project1 = document.getElementById("project1");
+    const project2 = document.getElementById("project2");
+
+    // Adding event listeners to load project details
+    project1.addEventListener("click", function() {
+        loadProjectDetails("project1");
+    });
+    
+    project2.addEventListener("click", function() {
+        loadProjectDetails("project2");
+    });
 });

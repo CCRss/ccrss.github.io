@@ -1,7 +1,79 @@
+/* Общие стили для всей страницы */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;  /* Шрифт для всей страницы */
 }
+
+/* Стили для шапки */
+#header {
+    text-align: center;  /* Текст по центру */
+    background-color: #ffffff;  /* Фоновый цвет */
+    padding: 20px;  /* Отступы вокруг */
+}
+
+#content, #dynamic-content {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.close-button {
+    cursor: pointer;
+    float: right;
+    font-size: 24px;
+}
+  
+/* Стили для изображения профиля */
+#profile-pic img {
+    width: 250px;  /* Ширина */
+    height: 250px;  /* Высота */
+    border-radius: 50%;  /* Округление */
+}
+
+/* Стили для описания профиля */
+#description p {
+    margin-top: 10px;  /* Верхний отступ */
+    font-size: 16px;  /* Размер шрифта */
+    color: #808080;  /* Цвет текста */
+}
+
+/* Стили для иконок социальных сетей */
+#social-icons img {
+    width: 50px;  /* Ширина */
+    height: 50px;  /* Высота */
+    text-decoration: none;  /* Убрать подчёркивание */
+}
+
+/* Стили для основного контента */
 #content {
-    display: flex;
-    justify-content: space-around;
+    display: flex;  /* Flexbox layout */
+    justify-content: center;  /* По центру главной оси */
+    flex-direction: column;  /* Вертикальное расположение */
+    align-items: center;  /* По центру поперечной оси */
+}
+
+.hidden-details {
+    display: none;
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none;  /* Скрыть по умолчанию */
+    align-items: center;  /* По центру поперечной оси */
+    justify-content: center;  /* По центру главной оси */
+}
+
+/* Стили для содержимого модального окна */
+.modal-content {
+    background-color: white;  /* Фоновый цвет */
+    padding: 20px;  /* Отступы вокруг */
+    border-radius: 10px;  /* Округление углов */
+    width: 80%;  /* Ширина */
+    max-width: 500px;  /* Максимальная ширина */
+    text-align: center;  /* Текст по центру */
+    color: black;  /* Цвет текста */
+}
+
+/* Общие стили для изображений */
+img {
+    max-width: 100%;  /* Максимальная ширина */
 }

@@ -6,14 +6,39 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>My GitHub Profiles</h1>
+    <div id="header">
+        <div id="profile-pic">
+            <img src="img/self.jpg" alt="Your Photo">
+        </div>
+        <div id="description">
+            <p>I want to create AGI</p>
+        </div>
+        <div id="social-icons">
+            <a href="https://github.com/CCRss" target="_blank"><img src="assets/github_icon.png" alt="GitHub"></a>
+            <a href="https://twitter.com/VladimirAlbrek1" target="_blank"><img src="assets/twitter_icon.png" alt="Twitter"></a>
+            <!-- Add more icons here -->
+        </div>
+    </div>
+    <hr>
     <div id="content">
-        <div id="profile-section">
-            <!-- Profile info will go here -->
-        </div>
+        <h1>My projects</h1>
         <div id="projects-section">
-            <!-- Projects info will go here -->
+            <div id="project1" class="project-item">Long Term Memory Chat </div>
+            <div id="project2" class="project-item">Project 2</div>
         </div>
+    </div>
+    <div id="dynamic-content">
+        <div id="project1-details" class="hidden-details">
+            <h2>Project 1 Details</h2>
+            <a href="https://github.com/CCRss/long_term_memory_chat">link</a>
+            <p>Long Term Memory Chat Assistant is an AI-powered conversational bot that leverages OpenAI's GPT-3.5 and Sentence Transformers' 'all-MiniLM-L6-v2' models. The chat assistant is unique in its ability to remember and reference past interactions, enhancing user engagement through personalized, context-aware dialogues. Perfect for developers, researcher.</p>
+            <img src="img/ltmc.png" alt="">
+        </div>
+        <div id="project2-details" class="hidden-details">
+            <h2>Project 2 Details</h2>
+            <p>Information about project 2.</p>
+        </div>
+        <!-- Here the dynamic content will be loaded -->
     </div>
     <script src="script.js"></script>
 </body>
