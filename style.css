@@ -26,11 +26,12 @@ body {
   padding: 15px;
 }
 
-#main-content {
+#center-content {
   flex: 3;
   background-color: #eee;
   padding: 15px;
 }
+
 
 .close-button {
     cursor: pointer;
