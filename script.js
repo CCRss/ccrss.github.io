@@ -10,6 +10,45 @@ function loadProjectDetails(projectId) {
     }
 }
 
+function toggleChat() {
+    const chatBox = document.getElementById("chat-box");
+    chatBox.classList.toggle("hidden");
+}
+
+document.getElementById("chat-input").addEventListener("keydown", async function(event) {
+    if (event.keyCode === 13) { // Enter key
+        const userText = event.target.value;
+        event.target.value = '';
+        const chatContent = document.getElementById("chat-content");
+        chatContent.innerHTML += `<div>User: ${userText}</div>`;
+
+        const dataToSend = {
+            user: "username",
+            message: userText,
+            timestamp: new Date().toISOString()
+        };
+
+        const response = await fetch('saveChat.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(dataToSend)
+        });
+
+        const result = await response.json();
+
+        if (result.status === 'success') {
+            const botReply = "Your message has been saved."; // Dummy reply
+            chatContent.innerHTML += `<div>Bot: ${botReply}</div>`;
+        } else {
+            chatContent.innerHTML += `<div>Bot: Error saving message.</div>`;
+        }
+    }
+});
+
+
+
 // On document load
 document.addEventListener("DOMContentLoaded", function() {
     // Getting project elements
