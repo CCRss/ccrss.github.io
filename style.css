@@ -1,79 +1,217 @@
-/* Общие стили для всей страницы */
+/* Общие стили */
 body {
-    font-family: Arial, sans-serif;  /* Шрифт для всей страницы */
+    font-family: sans-serif;
 }
 
-/* Стили для шапки */
+/* Шапка и профиль */
 #header {
-    text-align: center;  /* Текст по центру */
-    background-color: #ffffff;  /* Фоновый цвет */
-    padding: 20px;  /* Отступы вокруг */
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#content, #dynamic-content {
-    max-width: 800px;
-    margin: auto;
+.project-section {
+    margin: 20px;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+    text-align: justify; 
+    line-height: 1.6;    
+}
+
+.project-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-align: center;  
+}
+
+.project-section p {
+    margin-bottom: 20px;
+    font-size: 20px;     
+}
+
+.project-section a {
+    text-decoration: none;  
+    color: #000000;        
+}
+
+.project-section a:hover {    
+    text-decoration:underline;  
+}
+
+.project-section img {
+    max-width: 100%;     
+    height: auto;        
+    display: block;      
+    margin: 0 auto;      
+}
+#description-section {
     text-align: center;
 }
 
-.close-button {
+#profile-pic img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+#info {
+    margin-left: 30px;
+}
+
+#description p {
+    color: #808080;
+    font-size: 16px;
+}
+
+#social-icons img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Основной контент */
+#content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+#about-me {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+#about-me h2, #about-me h3 {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#about-me ul {
+    list-style-type: circle;
+}
+
+#about-me p {
+    margin-bottom: 10px;
+}
+
+
+/* Chatbot */
+#chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  #chatbot-button {
+    background-color: #4cafaa;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
     cursor: pointer;
-    float: right;
-    font-size: 24px;
+  }
+  
+  #chatbot-window {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  #chatbot-window.show {
+    display: block;
+  }
+  
+  #chatbot-messages {
+    height: 300px;
+    margin-bottom: 10px;
+    overflow-y: auto;
+    background-color: rgb(199, 224, 216);
+    border: 1px solid #ccc;
+    border-radius: 20px;
+  }
+  
+  .message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    max-width: 80%;
+  }
+  
+  .user {
+    background-color: #f1f1f1;
+    align-self: flex-end;
+  }
+  
+  .bot {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  #user-input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: #4cafaa;
+    color: white;
+    cursor: pointer;
+  }
+
+/* Sticky-menu */
+#sticky-menu {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    width: 10%;
+    height: 30%;
+    overflow: auto;
+    background-color: #ffffff;
+    opacity: 0;
+    transition: opacity 0.5s;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+#sticky-menu a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 12px;
+    font-size: 18px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#sticky-menu a:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
   
-/* Стили для изображения профиля */
-#profile-pic img {
-    width: 250px;  /* Ширина */
-    height: 250px;  /* Высота */
-    border-radius: 50%;  /* Округление */
-}
-
-/* Стили для описания профиля */
-#description p {
-    margin-top: 10px;  /* Верхний отступ */
-    font-size: 16px;  /* Размер шрифта */
-    color: #808080;  /* Цвет текста */
-}
-
-/* Стили для иконок социальных сетей */
-#social-icons img {
-    width: 50px;  /* Ширина */
-    height: 50px;  /* Высота */
-    text-decoration: none;  /* Убрать подчёркивание */
-}
-
-/* Стили для основного контента */
-#content {
-    display: flex;  /* Flexbox layout */
-    justify-content: center;  /* По центру главной оси */
-    flex-direction: column;  /* Вертикальное расположение */
-    align-items: center;  /* По центру поперечной оси */
-}
-
-.hidden-details {
-    display: none;
-}
-
-/* Стили для модального окна */
-.modal {
-    display: none;  /* Скрыть по умолчанию */
-    align-items: center;  /* По центру поперечной оси */
-    justify-content: center;  /* По центру главной оси */
-}
-
-/* Стили для содержимого модального окна */
-.modal-content {
-    background-color: white;  /* Фоновый цвет */
-    padding: 20px;  /* Отступы вокруг */
-    border-radius: 10px;  /* Округление углов */
-    width: 80%;  /* Ширина */
-    max-width: 500px;  /* Максимальная ширина */
-    text-align: center;  /* Текст по центру */
-    color: black;  /* Цвет текста */
-}
-
-/* Общие стили для изображений */
-img {
-    max-width: 100%;  /* Максимальная ширина */
-}
+  .project-section {
+    margin: 20px;
+    padding: 20px;  
+  }
