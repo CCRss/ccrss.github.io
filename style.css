@@ -1,217 +1,305 @@
 /* Общие стили */
 body {
-    font-family: sans-serif;
+  font-family: sans-serif;
 }
 
 /* Шапка и профиль */
 #header {
-    text-align: center;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-section {
-    margin: 20px;
-    padding: 20px;
-    border-top: 1px solid #ccc;
-    text-align: justify; 
-    line-height: 1.6;    
+  margin: 20px;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  text-align: justify; 
+  line-height: 1.6;    
 }
 
 .project-section h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-    text-align: center;  
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-align: center;  
 }
 
 .project-section p {
-    margin-bottom: 20px;
-    font-size: 20px;     
+  margin-bottom: 20px;
+  font-size: 20px;     
 }
 
 .project-section a {
-    text-decoration: none;  
-    color: #000000;        
+  text-decoration: none;  
+  color: #000000;        
 }
 
 .project-section a:hover {    
-    text-decoration:underline;  
+  text-decoration:underline;  
 }
 
 .project-section img {
-    max-width: 100%;     
-    height: auto;        
-    display: block;      
-    margin: 0 auto;      
+  max-width: 100%;     
+  height: auto;        
+  display: block;      
+  margin: 0 auto;      
 }
 #description-section {
-    text-align: center;
+  text-align: center;
 }
 
 #profile-pic img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
 }
 
 #info {
-    margin-left: 30px;
+  margin-left: 30px;
 }
 
 #description p {
-    color: #808080;
-    font-size: 16px;
+  color: #808080;
+  font-size: 16px;
 }
 
 #social-icons img {
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
 }
 
 /* Основной контент */
 #content {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    max-width: 60%;
-    margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  max-width: 60%;
+  margin: 0 auto;
 }
 
 #about-me {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
 }
 
 #about-me h2, #about-me h3 {
-    margin-top: 20px;
-    font-weight: bold;
+  margin-top: 20px;
+  font-weight: bold;
 }
 
 #about-me ul {
-    list-style-type: circle;
+  list-style-type: circle;
 }
 
 #about-me p {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
+
 
 
 /* Chatbot */
 #chatbot-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    border-radius: 20px;
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
-  }
-  
-  #chatbot-button {
-    background-color: #4cafaa;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-  }
-  
-  #chatbot-window {
-    display: none;
-    position: fixed;
-    bottom: 80px;
-    right: 20px;
-    width: 300px;
-    height: 400px;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
-  }
-  
-  #chatbot-window.show {
-    display: block;
-  }
-  
-  #chatbot-messages {
-    height: 300px;
-    margin-bottom: 10px;
-    overflow-y: auto;
-    background-color: rgb(199, 224, 216);
-    border: 1px solid #ccc;
-    border-radius: 20px;
-  }
-  
-  .message {
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 15px;
-    max-width: 80%;
-  }
-  
-  .user {
-    background-color: #f1f1f1;
-    align-self: flex-end;
-  }
-  
-  .bot {
-    background-color: #4CAF50;
-    color: white;
-  }
-  
-  #user-input {
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 15px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    border-radius: 15px;
-    background-color: #4cafaa;
-    color: white;
-    cursor: pointer;
-  }
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+}
+
+#chatbot-button {
+  background-color: #4cafaa;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#chatbot-window {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  height: 400px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+}
+
+#chatbot-window.show {
+  display: block;
+}
+
+#chatbot-messages {
+  height: 300px;
+  margin-bottom: 10px;
+  overflow-y: auto;
+  background-color: rgb(199, 224, 216);
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 15px;
+  max-width: 80%;
+}
+
+.user {
+  background-color: #f1f1f1;
+  align-self: flex-end;
+}
+
+.bot {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#user-input {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 15px;
+  background-color: #4cafaa;
+  color: white;
+  cursor: pointer;
+}
 
 /* Sticky-menu */
 #sticky-menu {
-    position: fixed;
-    top: 50%;
-    left: 0;
-    width: 10%;
-    height: 30%;
-    overflow: auto;
-    background-color: #ffffff;
-    opacity: 0;
-    transition: opacity 0.5s;
-    transform: translateY(-50%);
-    z-index: 1000;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  width: 10%;
+  height: 30%;
+  overflow: auto;
+  opacity: 0;
+  transition: opacity 0.5s;
+  transform: translateY(-50%);
+  z-index: 1000;
 }
 
 #sticky-menu a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    display: block;
-    margin-top: 10px;
-    margin-left: 10px;
-    padding: 12px;
-    font-size: 18px;
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 8px;
-    transition: background-color 0.3s, color 0.3s;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  display: block;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 12px;
+  font-size: 18px;
+  background-color: #ffffff;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 #sticky-menu a:hover {
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
-  
-  .project-section {
-    margin: 20px;
-    padding: 20px;  
-  }
+
+.project-section {
+  margin: 20px;
+  padding: 20px;  
+}
+
+/* Gallery*/
+#gallery-buttons {
+position: fixed;
+top: 50%;
+right: 0;
+width: 6%;
+height: 30%;
+overflow: auto;
+opacity: 0;
+transition: opacity 0.5s;
+transform: translateY(-50%);
+z-index: 1000;
+}
+
+#gallery-buttons button {
+color: rgb(0, 0, 0);
+background-color: #ffffff;
+text-decoration: none;
+display: block;
+margin-top: 10px;
+margin-right: 10px;
+padding: 12px;
+font-size: 18px;
+border: 1px solid rgb(0, 0, 0);
+border-radius: 8px;
+transition: background-color 0.3s, color 0.3s;
+cursor: pointer;
+}
+
+#gallery-buttons button:hover {
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+}
+
+#gallery-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.gallery-image {
+max-width: 50%;  
+max-height: 50%;  
+object-fit: contain;  /* Сохранять пропорции, не обрезая изображение */
+margin: 10px;  
+}
+.modal {
+display: none;
+position: fixed;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+background-color: #fefefe;
+margin: 15% auto;
+padding: 20px;
+border: 1px solid #888;
+width: 90%;
+}
+
+.close {
+color: #aaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: black;
+text-decoration: none;
+cursor: pointer;
+}
+
+
+.zoom-modal .modal-content {
+object-fit: contain; 
+max-width: 100%;
+max-height: 100%;
+}
+
